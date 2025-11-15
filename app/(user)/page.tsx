@@ -1,6 +1,10 @@
+import Hero from "@/components/Hero"
 
 export default function Home() {
+  
   return (
-    <h1>Learning Management System</h1>    
+    <div className="min-h-screen bg-background">
+      <Hero />
+    </div>  
   )
 }

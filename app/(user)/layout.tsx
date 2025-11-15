@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { ThemeProvider } from "@/components/ThemeProvider"
 import { ClerkProvider } from "@clerk/nextjs"
 import Header from "@/components/Header"
 
@@ -8,18 +9,25 @@ export const metadata: Metadata = {
 }
 
 export default function UserLayout({
-  children,
-}: Readonly<{
+  children
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <ClerkProvider>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-      </div>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+        </div>
+      </ThemeProvider>
     </ClerkProvider>
   )
 }
