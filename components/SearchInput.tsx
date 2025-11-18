@@ -6,6 +6,7 @@ export function SearchInput() {
   return (
     <Form
       action="/search"
+      method="get"
       className="relative w-full flex-1 max-w-[300px]"
     >
       <input 
