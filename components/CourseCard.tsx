@@ -8,15 +8,10 @@ import { Loader } from "@/components/ui/loader";
 import { CourseProgress } from "@/components/CourseProgress";
 import {
   GetCoursesQueryResult,
-  GetEnrolledCoursesQueryResult,
 } from "@/sanity.types";
 
 interface CourseCardProps {
-  course:
-    | GetCoursesQueryResult[number]
-    | NonNullable<
-        NonNullable<GetEnrolledCoursesQueryResult>["enrolledCourses"][number]["course"]
-      >;
+  course: GetCoursesQueryResult[number];
   progress?: number;
   href: string;
 }

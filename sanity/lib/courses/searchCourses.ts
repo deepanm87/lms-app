@@ -1,22 +1,22 @@
-import { defineQuery } from "groq"
-import { sanityFetch } from "../live"
+import { defineQuery } from "groq";
+import { sanityFetch } from "../live";
 
 export async function searchCourses(term: string) {
-  const searchQuery = defineQuery(`*[type == "course" && (
-      title match $term + "*" ||
-      description match $term + "*" ||
-      category->name match $term + "*"
+  const searchQuery = defineQuery(`*[_type == "course" && (
+    title match $term + "*" ||
+    description match $term + "*" ||
+    category->name match $term + "*"
   )] {
-      ...,
-      "slug": slug.current,
-      "category": category->{...},
-      "instructor": instructor->{...}
-  }`)
+    ...,
+    "slug": slug.current,
+    "category": category->{...},
+    "instructor": instructor->{...}
+  }`);
 
   const result = await sanityFetch({
     query: searchQuery,
-    params: { term }
-  })
+    params: { term },
+  });
 
-  return result.data || []
+  return result.data || [];
 }
