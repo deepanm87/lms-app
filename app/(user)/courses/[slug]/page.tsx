@@ -5,6 +5,8 @@ import { ArrowLeft, BookOpen } from "lucide-react"
 import getCourseBySlug from "@/sanity/lib/courses/getCourseBySlug"
 import { isEnrolledInCourse } from "@/sanity/lib/student/isEnrolledInCourse"
 import { auth } from "@clerk/nextjs/server"
+import EnrollButton from "@/components/EnrollButton"
+import { Suspense } from "react"
 
 interface CoursePageProps {
   params: Promise<{
@@ -69,7 +71,13 @@ export default async function CoursePage({ params }: CoursePageProps) {
               <div className="text-3xl font-bold text-white mb-4">
                 {course.price === 0 ? "Free" : `$${course.price}`}
               </div>
-              {/* <EnrollButton courseId={course._id} isEnrolled={isEnrolled} */}
+              <Suspense fallback={
+                <div className="w-full h-12 rounded-lg bg-gray-100 flex items-center justify-center">
+                  <div className="w-5 h-5 border-2 border-gray-400 border-t-gray-600 rounded-full animate-spin" />
+                </div>
+              }>
+                <EnrollButton courseId={course._id} isEnrolled={isEnrolled} />
+              </Suspense>
             </div>
           </div>
         </div>
