@@ -2,6 +2,8 @@ import { redirect } from "next/navigation"
 import { currentUser } from "@clerk/nextjs/server"
 import { getLessonById } from "@/sanity/lib/lessons/getLessonById"
 import { PortableText } from "@portabletext/react"
+import { VideoPlayer } from "@/components/VideoPlayer"
+import { LessonCompleteButton } from "@/components/LessonCompleteButton"
 
 interface LessonPageProps {
   params: Promise<{
@@ -31,7 +33,7 @@ export default async function LessonPage({ params }: LessonPageProps) {
           )}
 
           <div className="space-y-8">
-            {/* {lesson.videoUrl && <VideoPlayer url={lesson.videoUrl} />*/}
+             {lesson.videoUrl && <VideoPlayer url={lesson.videoUrl} />}
             {lesson.content && (
               <div>
                 <h2 className="text-xl font-semibold mb-4">Lesson Notes</h2>
@@ -42,7 +44,7 @@ export default async function LessonPage({ params }: LessonPageProps) {
             )}
 
             <div className="flex justify-end">
-              {/* <LessonCompleteButton lessonId={lesson._id} clerkId={user!.id} />*/}
+              <LessonCompleteButton lessonId={lesson._id} clerkId={user!.id} />
             </div>
           </div>
         </div>
