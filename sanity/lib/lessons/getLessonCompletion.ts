@@ -20,6 +20,11 @@ export async function getLessonCompletions(
       }
     }`)
 
+    const result = await sanityFetch({
+      query: getCompletionsQuery,
+      params: { studentId, courseId }
+    })
+
   const { course, completedLessons } = result.data
 
   const moduleProgress = course?.modules?.map(module => {
@@ -38,7 +43,7 @@ export async function getLessonCompletions(
   })
 
   const totalLessons = 
-    course?.module?.reduce(
+    course?.modules?.reduce(
       (acc, module) => acc + (module?.lessons?.length || 0),
       0
     ) || 0
