@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is the live URL of this project: https://lms-app-chi.vercel.app
 
-## Getting Started
+This is a learning management system application.
 
-First, run the development server:
+It allows you to login and logut using Google sign-in or email address using Clerk API system.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is the home page.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<img width="1370" height="725" alt="Screenshot 2025-11-21 at 14 42 30" src="https://github.com/user-attachments/assets/86313ab4-99fd-463a-9a17-fa0127995bcb" />
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This has a my courses section that shows all the courses the user is enrolled in.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+<img width="1385" height="711" alt="Screenshot 2025-11-21 at 14 49 49" src="https://github.com/user-attachments/assets/76de44cc-901d-44b5-a84f-4e77ee8ee446" />
 
-To learn more about Next.js, take a look at the following resources:
+This shows the page for a single course with progress and mark as complete functionality for lessons and the course progress updates dynamically.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<img width="1390" height="732" alt="Screenshot 2025-11-21 at 14 50 27" src="https://github.com/user-attachments/assets/9d7cdf44-9225-4764-9714-818e5e1346e5" />
 
-## Deploy on Vercel
+This supports light and dark mode.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This has a studio back end CMS system via Sanity that allows us to customize the data. We can add, edit, update and delete courses, modules, lessons, instructors and view enrolled students.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+<img width="1448" height="682" alt="Screenshot 2025-11-21 at 14 55 47" src="https://github.com/user-attachments/assets/6d99969c-0801-4f48-b942-709a6dec4ca3" />
+
+This also suppots live visual editing via Sanity visual editing tool.
+
+<img width="1449" height="737" alt="Screenshot 2025-11-21 at 14 56 50" src="https://github.com/user-attachments/assets/740dc549-6728-4458-b0b8-3e5e0ba369e9" />
+
+It supports light/dark mode.
+
+<img width="305" height="275" alt="Screenshot 2025-11-21 at 14 57 51" src="https://github.com/user-attachments/assets/1a193363-2e82-42ae-870d-0531d00f6dd5" />
+
