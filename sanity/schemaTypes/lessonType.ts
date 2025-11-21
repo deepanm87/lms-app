@@ -22,6 +22,11 @@ export const lessonType = defineType({
       validation: rule => rule.required()
     }),
     defineField({
+      name: "description",
+      title: "Description",
+      type: "text"
+    }),
+    defineField({
       name: "videoUrl",
       title: "Video URL",
       type: "url",

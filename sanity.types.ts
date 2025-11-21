@@ -109,6 +109,7 @@ export type Lesson = {
   _rev: string;
   title?: string;
   slug?: Slug;
+  description?: string;
   videoUrl?: string;
   content?: Array<{
     children?: Array<{
@@ -396,6 +397,7 @@ export type GetCourseByIdQueryResult = {
       _rev: string;
       title?: string;
       slug?: Slug;
+      description?: string;
       videoUrl?: string;
       content?: Array<{
         children?: Array<{
@@ -492,6 +494,7 @@ export type GetCourseBySlugQueryResult = {
       _rev: string;
       title?: string;
       slug?: Slug;
+      description?: string;
       videoUrl?: string;
       content?: Array<{
         children?: Array<{
@@ -694,6 +697,7 @@ export type ProgressQueryResult = {
       _rev: string;
       title?: string;
       slug?: Slug;
+      description?: string;
       videoUrl?: string;
       content?: Array<{
         children?: Array<{
@@ -780,6 +784,7 @@ export type ProgressQueryResult = {
         _rev: string;
         title?: string;
         slug?: Slug;
+        description?: string;
         videoUrl?: string;
         content?: Array<{
           children?: Array<{
@@ -821,6 +826,7 @@ export type GetLessonByIdQueryResult = {
   _rev: string;
   title?: string;
   slug?: Slug;
+  description?: string;
   videoUrl?: string;
   content?: Array<{
     children?: Array<{
@@ -867,6 +873,7 @@ export type GetCompletionsQueryResult = {
       _rev: string;
       title?: string;
       slug?: Slug;
+      description?: string;
       videoUrl?: string;
       content?: Array<{
         children?: Array<{
@@ -953,6 +960,7 @@ export type GetCompletionsQueryResult = {
         _rev: string;
         title?: string;
         slug?: Slug;
+        description?: string;
         videoUrl?: string;
         content?: Array<{
           children?: Array<{
